@@ -1,17 +1,11 @@
 <script setup lang="ts">
 import { faker } from "@faker-js/faker";
-import { toRefs } from "vue";
+import { ref } from "vue";
 import useNames from "../stores/names";
-
-const props = defineProps<{ count: number }>();
-const { count } = toRefs(props);
-const emit = defineEmits(["update:count"]);
+import Counter from "./Counter.vue";
 
 const names = useNames();
-
-function increment() {
-  emit("update:count", count.value + 1);
-}
+const count = ref(0);
 </script>
 
 <template>
@@ -21,8 +15,9 @@ function increment() {
     {{ names.surname }}
   </h1>
 
+  <Counter v-model:count="count" />
+
   <div class="card">
-    <button type="button" @click="increment">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR

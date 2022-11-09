@@ -10,16 +10,18 @@ This template should help get you started developing with Vue 3 and TypeScript i
 - SCSS
 - Router
 - Axios
+- Vitest
 
 ## Project Setup
 
 - `.env` file example. (name variable with format VITE_*)
 - Scss styling with `global.scss` for universal variables and styles.
 - Vue router. (config and pages `/src/router.ts`)
-- Pinia stores. (`/src/stores` directory with 2 examples).
+- Pinia stores. (`/src/stores/` directory with 2 examples).
 - Axios APIs. (`/src/api/` with base api file `api.ts` and one example `randomWord.ts`)
 - `views` directory for page root components.
 - `<Suspense>` tag surrounds `RouterView` so view components can be async components.
+- Vitest for testing components and code. (`/test/` directory contains examples)
 
 ## Getting Started
 
